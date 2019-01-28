@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "description": "Utility extension for Knode",
+  "name": "KN Util",
+  "version": "0.1",
+  "permissions": ["contextMenus", "nativeMessaging", "tabs", "storage"],
+  "background": {"scripts": ["background.js"]},
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"]
+  }],
+  "web_accessible_resources" : ["*.html"]
+}
